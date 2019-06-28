@@ -1,0 +1,9 @@
+b) Write a short (200-300 words) text/article on when to use Docker and what are the benefits. Write one example with and without containers. You can also write on any other container platform and compare it to Docker. A markdown file in your repository is the preferred format for submission.
+
+# Why use Docker
+
+Docker is a fairly simple tool that can reduce all the time that goes into updating tools and libraries, when newer versions are needed for the project under construction. It allows access to services when they are not installed locally. Docker makes it possible to ensure that all the members in a team are using the same version and that the same tools are accessible services are being developed. Especially Docker Compose is a very useful tool to avoid multiple projects running in multiple windows or terminals, and it makes the process of compiling a lot smoother. This reduces command line usage as well, since only one command is needed to run several processes.
+
+When using Docker containers, applications need less memory to run, and the process of development is more efficient due to the efficiency of the containers themselves. It is also important to note that the containers encapsulate only the things the application needs, and nothing else, which furthermore improves efficiency, thus isolating the application. For example, a team of developers might all have different operating systems on their computers, different programs and tools installed, different versions of these tools, ... It could in some cases be impossible to manage the application development and to ensure that it actually is possible for all team members. Docker containers give an enormous amount of help in this.
+
+Docker should be utilized when applications and tools need to be the same across operating systems. It also works well for small applications.

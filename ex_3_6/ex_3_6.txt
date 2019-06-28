@@ -1,0 +1,20 @@
+I used the ruby on rails project for this exercise.
+
+
+Before:
+1a4d889c8b6a        5 days ago          /bin/sh -c #(nop)  CMD ["rails" "s"]            0B
+6ef7b6bd334f        5 days ago          /bin/sh -c rails db:migrate                     25.6MB
+544c59373c07        5 days ago          /bin/sh -c bundle install                       123MB
+ad0bd2cae442        5 days ago          /bin/sh -c gem install bundler                  1.78MB
+ae9bd53fe589        5 days ago          /bin/sh -c nodejs -v                            0B
+8452aebe6565        5 days ago          /bin/sh -c apt-get update && apt install -y …   32.9MB
+9f0ca5fb53f5        5 days ago          /bin/sh -c #(nop)  EXPOSE 3000                  0B
+8419188e2c9c        5 days ago          /bin/sh -c #(nop) COPY dir:74bc77681b4e08c53…   47.9kB
+=> 182MB
+
+After:s
+eb5b8627a074        About a minute ago   /bin/sh -c #(nop)  CMD ["rails" "s"]            0B
+b6c7f591f1c1        About a minute ago   /bin/sh -c apt-get update && apt install -y …   184MB
+9f0ca5fb53f5        5 days ago           /bin/sh -c #(nop)  EXPOSE 3000                  0B
+8419188e2c9c        5 days ago           /bin/sh -c #(nop) COPY dir:74bc77681b4e08c53…   47.9kB
+=> 184MB, nothing changed :/
