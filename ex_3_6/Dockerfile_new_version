@@ -1,5 +1,11 @@
 FROM ruby:latest
 
+RUN useradd -m app && \
+	mkdir -p rails && \
+	chown app /rails
+
+
+WORKDIR /rails
 COPY rails ./
 
 EXPOSE 3000
@@ -9,11 +15,10 @@ RUN apt-get update && apt install -y --allow-unauthenticated nodejs && \
     gem install bundler && \
     bundle install && \
     rails db:migrate && \
-	useradd -m app && \
-	chown -R app /app
+	rm -rf /var/lib/apt/lists/* && \
+	chown -R app /rails
 
 USER app
 
-WORKDIR /app
 
 CMD ["rails", "s"]
