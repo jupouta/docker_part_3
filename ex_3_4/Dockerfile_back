@@ -1,0 +1,22 @@
+FROM node:alpine
+
+RUN adduser -D app
+
+RUN mkdir -p backend
+RUN chown app /backend
+
+WORKDIR /backend
+COPY backend ./
+
+ENV FRONT_URL=http://localhost:5000
+EXPOSE 8000
+
+RUN apk update && apk add bash && \
+	apk add --no-cache curl && \
+	npm install && \
+	apk del curl && \
+	chown -R app /backend
+
+USER app
+
+CMD ["npm", "start"]

@@ -3,4 +3,4 @@ front:
 
 
 back:
- =>
+204MB => 64MB
